@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, button, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Variables*/
+div, header, nav, section, article, aside, footer, figure, hr {
+  position: relative; }
+
+html {
+  font-size: 62.5%; }
+
+body, .subpage {
+  background-color: #E0DACD; }
+
+.container {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto; }
+
+h1 {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 4.5em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #3F3A34; }
+
+h2 {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 2.8em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #3F3A34;
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+h3 {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #3F3A34;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+p {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 1.8em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #3F3A34;
+  max-width: 550px; }
+
+a {
+  color: #3F3A34;
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  color: #3F3A34; }
+  a:hover {
+    text-decoration: underline;
+    color: #3F3A34; }
+
+.clear {
+  clear: both; }
+
+.subpage {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: #E0DACD;
+  overflow: hidden; }
+
+.column-left {
+  width: 60%;
+  float: left; }
+
+.column-right {
+  width: 30%;
+  float: right; }
+
+/*
+  ========================================
+  Header
+  ========================================
+*/
+header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  background-image: url(../assets/img_global/greenvilledowntown1.jpg);
+  background-size: cover; }
+  header .logo {
+    float: left; }
+
+.subpage-header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  background-image: url(../assets/img_global/greenvilledowntown1.jpg);
+  background-size: cover;
+  max-height: 280px; }
+  .subpage-header .logo {
+    float: left; }
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+nav {
+  width: 650px;
+  float: right; }
+  nav li {
+    margin-left: 20px;
+    float: right;
+    display: block; }
+  nav a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
+  nav img {
+    display: block;
+    text-align: center;
+    margin: 10px auto; }
+  nav .divider {
+    width: 650px;
+    padding-top: 10px;
+    border: 0;
+    border-bottom: 3px dashed #3F3A34;
+    background-image: url(../assets/greenvilledowntown.jpg); }
+
+ /*
+  ========================================
+  Photos
+  ========================================
+*/
+.row {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  padding-bottom: 40px;
+  border-top: 3px solid #3F3A34;
+  border-bottom: 3px solid #3F3A34;
+  background-image: url(../assets/img_global/stripepattern.jpg);
+  background-repeat: repeat; }
+  .row .photo-wrap {
+    width: 960px;
+    margin: 0; }
+  .row img {
+    border: 2px solid #3F3A34;
+    display: inline-block;
+    margin-left: 40px; }
+  .row .photo-1 {
+    margin-left: 0; }
+  .row h1 {
+    margin-top: 30px; }
+
+.index-row {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: #3F3A34;
+  overflow: hidden; }
+  .index-row .index-photo-wrap {
+    width: 931px;
+    margin: 0 auto; }
+  .index-row img {
+    display: inline-block;
+    margin-left: 45px; }
+  .index-row .photo-1 {
+    margin-left: 0; }
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+.welcome {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden; }
+  .welcome h1, .welcome h2 {
+    text-align: center; }
+  .welcome button {
+    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 1.8em;
+    padding: 18px;
+    border-radius: 5px;
+    color: #F2DD78;
+    background-color: #3F3A34;
+    border: 3px outset #3F3A34;
+    outline: none;
+    float: right;
+    margin-top: 50px; }
+    .welcome button:hover {
+      color: #3F3A34;
+      background-color: #F2DD78; }
+
+.below-fold {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  background-image: url(../assets/img_global/stripepattern.jpg);
+  background-repeat: repeat;
+  overflow: hidden; }
+
+.index-copy {
+  background-color: #E0DACD;
+  border-radius: 10px;
+  padding: 20px; }
+  .index-copy p {
+    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 1.8em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #3F3A34;
+    max-width: 550px;
+    margin-bottom: 20px; }
+
+.map {
+  display: block;
+  border-radius: 10px;
+  float: left;
+  margin-top: 30px;
+  border: 3px #3F3A34 solid; }
+
+/*
+  ========================================
+  About
+  ========================================
+*/
+.about h2 {
+  margin-top: 30px; }
+.about .first {
+  margin-top: 0; }
+.about span {
+  font-weight: bold; }
+.about li {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 1.8em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #3F3A34;
+  max-width: 550px;
+  display: block;
+  background-image: url(../assets/icons_global/toothservices.png);
+  background-repeat: no-repeat;
+  list-style-position: inside;
+  margin-left: 1em;
+  padding-left: 2.5em;
+  margin-top: 15px;
+  line-height: 30px; }
+
+/*
+  ========================================
+  Services 
+  ========================================
+*/
+.services p {
+  margin-bottom: 25px; }
+.services li {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 1.8em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #3F3A34;
+  max-width: 550px;
+  height: 70px;
+  width: 130px;
+  float: left;
+  display: block;
+  background-image: url(../assets/icons_global/toothservices.png);
+  background-repeat: no-repeat;
+  padding-left: 2.2em;
+  margin-bottom: 20px;
+  margin-right: 3%; }
+
+/*
+  ========================================
+  Financial Page
+  ========================================
+*/
+.financial {
+  border-top: 3px solid #3F3A34; }
+  .financial p {
+    margin-bottom: 30px; }
+
+/*
+  ========================================
+  Patients
+  ========================================
+*/
+.patients .sidenote {
+  font-style: italic;
+  font-size: 12px;
+  display: block; }
+.patients h2 {
+  margin-top: 20px; }
+.patients p {
+  margin-bottom: 20px; }
+.patients .list {
+  margin-bottom: 10px; }
+.patients ul {
+  padding-left: 3em;
+  margin-bottom: 20px; }
+.patients li {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 1.8em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #3F3A34;
+  max-width: 550px;
+  list-style-type: disc;
+  line-height: 2; }
+.patients button {
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 1.8em;
+  padding: 18px;
+  border-radius: 5px;
+  color: #F2DD78;
+  background-color: #3F3A34;
+  border: 3px outset #3F3A34;
+  outline: none;
+  float: left;
+  margin: 20px 0 20px 40px; }
+  .patients button:hover {
+    color: #3F3A34;
+    background-color: #F2DD78; }
+.patients .button- {
+  margin-left: 0; }
+
+/*
+  ========================================
+  Side Items
+  ========================================
+*/
+.address {
+  width: 80%;
+  background-color: #3F3A34;
+  border-radius: 10px;
+  float: right;
+  padding: 30px 50px;
+  display: block; }
+  .address h3 {
+    color: #F2DD78; }
+  .address p {
+    color: #FFF;
+    border-bottom: 1px solid #F2DD78;
+    padding-bottom: 20px; }
+  .address a {
+    color: #3F3A34;
+    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #FFF;
+    display: block;
+    margin-bottom: 0; }
+    .address a:hover {
+      text-decoration: underline;
+      color: #F2DD78; }
+  .address button {
+    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 1.8em;
+    padding: 18px;
+    border-radius: 5px;
+    color: #3F3A34;
+    background-color: #F2DD78;
+    border: 3px outset #F2DD78;
+    outline: none;
+    margin: 20px auto; }
+    .address button:hover {
+      color: #F2DD78;
+      background-color: #3F3A34; }
+
+.chamber {
+  padding-top: 50px;
+  float: right; }
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: #817A6E;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  footer p {
+    max-width: 100%;
+    font-size: 1.8em;
+    color: #FFF;
+    text-align: center; }
+  footer a {
+    color: #3F3A34;
+    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #FFF; }
+    footer a:hover {
+      text-decoration: underline;
+      color: #3F3A34; }
+
+/*# sourceMappingURL=newpatient.css.map */

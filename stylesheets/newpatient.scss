@@ -1,0 +1,334 @@
+@import 'reset';
+@import 'var-and-mixins';
+@import 'presets';
+
+/*
+  ========================================
+  Header
+  ========================================
+*/
+
+header {
+  @include header-style;
+}
+
+.subpage-header {
+  @include header-style;
+  max-height: 280px;
+}
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+nav{
+  width:650px;
+  float: right;
+
+
+  li {
+    margin-left:20px; 
+    float: right;
+    display: block;
+    }
+
+  a{
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  }
+
+  img {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  }
+
+  .divider{
+  width: 650px;
+  padding-top: 10px;
+  border: 0;
+  border-bottom: 3px dashed #3F3A34;
+  background-image: url(../assets/greenvilledowntown.jpg);
+  }
+
+}
+
+ /*
+  ========================================
+  Photos
+  ========================================
+*/
+
+.row {
+@include div-bg(100%, $transparent);
+padding-bottom: 40px;
+border-top: 3px solid #3F3A34;
+border-bottom: 3px solid #3F3A34;
+background-image: url(../assets/img_global/stripepattern.jpg);
+background-repeat: repeat;
+  
+  .photo-wrap {
+  width: 960px;
+  margin: 0;
+  }
+  
+  img{
+  border: 2px solid #3F3A34;
+  display: inline-block;
+  margin-left: 40px;
+  }
+ 
+  .photo-1{
+  margin-left: 0;
+  }
+
+  h1 {
+  margin-top: 30px;
+  }
+
+}
+
+.index-row {
+@include div-bg (100%, $color-primary-2);
+  
+  .index-photo-wrap {
+  width: 931px;
+  margin: 0 auto;
+  }
+  
+  img{
+  display: inline-block;
+  margin-left: 45px;
+  }
+  .photo-1{
+  margin-left: 0;
+  }
+}
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+.welcome { 
+  @include div-bg (100%, $transparent);
+
+  h1, h2{
+  text-align: center;
+  }
+
+  button {
+  @include button-style ($color-primary-1, $color-primary-2);
+  float: right;
+  margin-top: 50px;
+  }
+}
+
+.below-fold{
+  @include div-bg (100%, transparent);
+  background-image: url(../assets/img_global/stripepattern.jpg);
+  background-repeat: repeat;
+  overflow: hidden;
+}
+
+
+.index-copy{
+  background-color: $color-primary-3;
+  border-radius: 10px;
+  padding:20px;
+  
+  p{
+  @include p-font;
+  margin-bottom: 20px;
+  }
+
+}
+
+.map{
+  display: block;
+  border-radius: 10px;
+  float: left;
+  margin-top: 30px;
+  border: 3px #3F3A34 solid;
+}
+
+
+/*
+  ========================================
+  About
+  ========================================
+*/
+
+.about {
+
+  h2{
+  margin-top: 30px;
+  }
+
+  .first {
+    margin-top: 0;
+  }
+
+  span{
+  font-weight: bold;
+  } 
+
+  li {
+    @include p-font;
+    display: block;
+    background-image: url(../assets/icons_global/toothservices.png);
+    background-repeat: no-repeat;
+    list-style-position: inside;
+    margin-left: 1em;
+    padding-left: 2.5em;
+    margin-top: 15px;
+    line-height: 30px;
+    }
+}
+
+/*
+  ========================================
+  Services 
+  ========================================
+*/
+.services {
+  p {
+  margin-bottom: 25px;
+  }
+
+  li {
+  @include p-font;
+  height: 70px;
+  width: 130px;
+  float: left;
+  display:block;
+  background-image: url(../assets/icons_global/toothservices.png);
+  background-repeat: no-repeat;
+  padding-left: 2.2em;
+  margin-bottom: 20px;
+  margin-right: 3%;
+  }
+}
+
+/*
+  ========================================
+  Financial Page
+  ========================================
+*/
+
+.financial {
+  border-top: 3px solid #3F3A34;
+
+  p{
+  margin-bottom: 30px;
+  }
+}
+
+/*
+  ========================================
+  Patients
+  ========================================
+*/
+.patients {
+
+ .sidenote{
+  font-style: italic;
+  font-size: 12px;
+  display: block;
+  }
+
+  h2{
+  margin-top: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .list {
+    margin-bottom: 10px;
+  }
+
+  ul{
+  padding-left: 3em; 
+  margin-bottom: 20px;
+  }
+
+  li{
+  @include p-font;
+  list-style-type: disc;
+  line-height: 2;
+  }
+
+  button{
+    @include button-style ($color-primary-1, $color-primary-2);
+    float: left;
+    margin: 20px 0 20px 40px;
+  }
+
+  .button- {
+    margin-left: 0;
+  }
+}
+
+/*
+  ========================================
+  Side Items
+  ========================================
+*/
+
+.address{
+width: 80%;
+background-color: #3F3A34;
+border-radius: 10px;
+float: right;
+padding: 30px 50px;
+display: block;
+ 
+  h3{
+   color: #F2DD78;
+  }
+
+  p {
+  color: #FFF;
+  border-bottom: 1px solid #F2DD78;
+  padding-bottom: 20px;
+  }
+
+  a {
+  @include link-style (#FFF, $color-primary-1);  
+  display: block;
+  margin-bottom: 0;
+  }
+
+  button {
+    @include button-style ($color-primary-2, $color-primary-1);
+    margin: 20px auto;
+  }
+}
+
+.chamber{
+padding-top: 50px; 
+float: right;
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+footer {
+@include div-bg (100%, $color-secondary-1); 
+padding-top: 30px;
+padding-bottom: 30px;
+  p{
+  @include footer-font;
+  }
+  
+  a {
+    @include link-style (#FFF, $color-primary-2);
+  }
+}

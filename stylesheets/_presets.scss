@@ -1,0 +1,54 @@
+div, header, nav, section, article, aside, footer, figure, hr{
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, .subpage{
+background-color: $color-primary-3;
+}
+
+.container{
+  max-width: 1000px;
+  width:85%;
+  margin: 0 auto;
+}
+
+h1 {
+  @include h1-font;
+}
+
+h2 {
+  @include h2-font;
+}
+
+h3 {
+  @include h3-font;
+}
+
+p {
+  @include p-font;
+}
+
+a {
+  @include link-style($color-primary-2, $color-primary-2);
+}
+
+.clear{
+  clear: both;
+}
+
+.subpage {
+  @include div-bg(100%, $color-primary-3);
+}
+.column-left {
+  width: 60%;
+  float: left;
+}
+
+.column-right {
+  width: 30%;
+  float: right;
+}
