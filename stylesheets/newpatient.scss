@@ -67,7 +67,7 @@ nav{
 padding-bottom: 40px;
 border-top: 3px solid #3F3A34;
 border-bottom: 3px solid #3F3A34;
-background-image: url(../assets/img_global/stripepattern.jpg);
+background-image: url(../assets/img_global/stripepattern1.jpg);
 background-repeat: repeat;
   
   .photo-wrap {
@@ -129,7 +129,7 @@ background-repeat: repeat;
 
 .below-fold{
   @include div-bg (100%, transparent);
-  background-image: url(../assets/img_global/stripepattern.jpg);
+  background-image: url(../assets/img_global/stripepattern1.jpg);
   background-repeat: repeat;
   overflow: hidden;
 }
