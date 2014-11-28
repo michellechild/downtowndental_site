@@ -14,6 +14,7 @@ background-color: $color-primary-3;
   max-width: 1000px;
   width:85%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 h1 {
@@ -42,13 +43,4 @@ a {
 
 .subpage {
   @include div-bg(100%, $color-primary-3);
-}
-.column-left {
-  width: 60%;
-  float: left;
-}
-
-.column-right {
-  width: 30%;
-  float: right;
 }
