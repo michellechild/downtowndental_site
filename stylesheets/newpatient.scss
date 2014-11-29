@@ -96,6 +96,33 @@ border-bottom: 3px solid $color-primary-2;
   margin-left: 0;
   }
 }
+
+  .row {
+  @include div-bg(100%, $transparent);
+  border-top: 3px solid $color-primary-2;
+  border-bottom: 3px solid $color-primary-2;
+  background-image: url(../assets/img_global/stripepattern1.jpg);
+  background-repeat: repeat;
+
+  .photo-wrap {
+  max-width: 960px;
+  margin: 0;
+  }
+    
+  img{
+  border: 2px solid #3F3A34;
+  width: 100%;
+  margin-bottom: 10px;
+  }
+
+  .photo-1{
+  margin-left: 0;
+  }
+
+  h1 {
+  margin-top: 30px;
+  }
+  }
 /*
   ========================================
   GLOBAL Home
@@ -153,279 +180,13 @@ iframe{
 
 /*
   ========================================
-  GLOBAL Footer
-  ========================================
-*/
-.chamber{
-padding-top: 30px; 
-}
-
-footer {
-@include div-bg (100%, $color-primary-2); 
-padding-top: 30px;
-padding-bottom: 30px;
-
-.second-footer {
-  display: none;
-}
-}
-
-.global-footer {
-  p{
-  @include footer-font;
-  }
-  
-  a {
-    @include link-style (#FFF, $color-primary-1);
-  }
-}
-
-
-@media screen and (min-width: 35em) {
-
-  .menu {
-  display: none;
-  }
-
-  header {
-  @include header-style;
-  overflow: hidden;
-  }
-
-  .logo{
-  display: block;
-  margin: 0 0 20px 0;
-  float: left;
-  }
-
-  .global-aside {
-  display: none;
-  }
-
-  nav{
-  display: block;
-  width: 100%;
-  float: right;
-  max-width: 500px;
-
-    ul {
-    border-top: 1px solid $color-primary-2;
-    overflow: hidden;
-    }
-
-    li {
-      display: block;
-      float: right;
-      padding: 1.25%;
-    }
-    
-    a{
-    display: block;
-    text-decoration: none;
-      
-      &:hover{
-      text-decoration: underline;
-      color: $color-primary-2;
-      }
-    }
-
-    img {
-    display: block;
-    text-align: center;
-    margin: 10px auto;
-    }
-
-    .nav-icon {
-      display: none;
-    }
-  }
-
-  .index-row {
-  @include div-bg (100%, $color-primary-2);
-  background-image: none;
-  border: none;
-
-    img{
-    width: 48%;
-    margin-bottom: 20px;
-    float: left;
-    border-radius: 5px;
-      
-      &:nth-of-type(2n){
-        margin-left: 2%;
-      }
-    }
-  }
-
-  .below-fold{
-  @include div-bg (100%, transparent);
-  background-image: url(../assets/img_global/stripepattern1.jpg);
-  background-repeat: repeat;
-  overflow: hidden;
-  }
-  
-  .index-copy{
-    background-color: $color-primary-3;
-    border-radius: 10px;
-    padding:20px;
-  }
-  
-  .address {
-  margin: 50px 0;
-  width: 80%;
-  max-width: 400px;
-  display: block;
-  background-color: #3F3A34;
-  border-radius: 10px;
-  padding: 30px 10%;
-
-    h3{
-     color: #F2DD78;
-    }
-
-    p {
-    color: #FFF;
-    border-bottom: 1px solid #F2DD78;
-    padding-bottom: 20px;
-    }
-
-    a {
-    @include link-style (#FFF, $color-primary-1);  
-    display: block;
-    margin-bottom: 0;
-    }
-
-    button {
-      @include button-style ($color-primary-2, $color-primary-1);
-      margin: 20px auto;
-    }
-  }
-
-  iframe{
-    max-width: 500px;
-  }
-
-  footer{
-    .global-footer{
-    display: none;
-    }
-
-    .second-footer{
-    display: block;
-    } 
-    
-    .second-footer p{
-    @include footer-font;
-    }
-    
-    .second-footer a{  
-        @include link-style (#FFF, $color-primary-1);
-    }
-  }
-
-}
-
-@media screen and (min-width: 53em) {
-
-  nav{
-  max-width: 520px;
-  }
-  nav li {
-  padding:1.75%;
-  }
-
-.subpage-header {
-@include header-style;
-max-height: 280px;
-}
-
-  .welcome { 
-    h1, h2{
-    text-align: center;
-    }
-
-    button {
-    float: right;
-    margin-top: 50px;
-    }
-  }
-
-  .index-row img{
-  width: 23.5%;
-  margin-left: 2%;
-    
-    &:nth-of-type(2n){
-      margin-left: 2%;
-    }
-    
-    &:nth-of-type(1){ 
-      margin-left: 0;
-    }
-  }
-
-.row {
-@include div-bg(100%, $transparent);
-padding-bottom: 40px;
-border-top: 3px solid #3F3A34;
-border-bottom: 3px solid #3F3A34;
-background-image: url(../assets/img_global/stripepattern1.jpg);
-background-repeat: repeat;
-  
-.photo-wrap {
-width: 960px;
-margin: 0;
-}
-  
-img{
-border: 2px solid #3F3A34;
-display: inline-block;
-margin-left: 40px;
-}
-
-.photo-1{
-margin-left: 0;
-}
-
-h1 {
-margin-top: 30px;
-}
-
-}
-
-.column-left {
-width: 55%;
-margin-right: 2%;
-float: left;
-}
-
-.column-right {
-  width: 40%;
-  float: right;
-}
-.address {
-    margin: 0;
-    width: 95%;
-}
-
-.chamber{
-float: right;
-}
-
-.second-footer p {
-  text-align: center;
-}
-
-/*
-  ========================================
-  About
+  GLOBAL About
   ========================================
 */
 
 .about {
-
   h2{
   margin-top: 30px;
-  font-weight: bold;
   }
 
   .first {
@@ -437,10 +198,7 @@ float: right;
   } 
 
   li {
-    @include p-font;
-    display: block;
-    background-image: url(../assets/icons_global/toothservices.png);
-    background-repeat: no-repeat;
+    @include li-font;
     list-style-position: inside;
     margin-left: 1em;
     padding-left: 2.5em;
@@ -451,43 +209,33 @@ float: right;
 
 /*
   ========================================
-  Services 
+  GLOBAL Services
   ========================================
 */
 .services {
-  h2 {
-    font-weight: bold;
-  }
-
+  overflow: hidden;
   p {
   margin-bottom: 25px;
   }
 
   li {
-  @include p-font;
+  @include li-font;
   height: 70px;
   width: 130px;
   float: left;
-  display:block;
-  background-image: url(../assets/icons_global/toothservices.png);
-  background-repeat: no-repeat;
   padding-left: 2.2em;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   margin-right: 5%;
   }
 }
 
 /*
   ========================================
-  Financial Page
-  ========================================
+  GLOBAL Financial  ========================================
 */
 
 .financial {
   border-top: 3px solid #3F3A34;
-  h2 {
-    font-weight: bold;
-  }
 
   p{
   margin-bottom: 30px;
@@ -496,7 +244,7 @@ float: right;
 
 /*
   ========================================
-  Patients
+  GLOBAL Patients
   ========================================
 */
 .patients {
@@ -536,12 +284,278 @@ float: right;
 
   button{
     @include button-style ($color-primary-1, $color-primary-2);
-    float: left;
-    margin: 20px 0 20px 40px;
+    display: block;
+    margin: 30px 0 20px 0px;
   }
 
   .button-1 {
     margin-left: 0;
   }
 }
+/*
+  ========================================
+  GLOBAL Footer
+  ========================================
+*/
+.chamber{
+  padding-top: 50px; 
+  }
+
+footer {
+  @include div-bg (100%, $color-primary-2); 
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .second-footer {
+    display: none;
+  }
+}
+
+.global-footer {
+  p{
+  @include footer-font;
+  }
+  
+  a {
+    @include link-style (#FFF, $color-primary-1);
+  }
+}
+
+
+@media screen and (min-width: 35em) {
+
+/*header*/
+  .menu {
+  display: none;
+  }
+
+  header {
+  @include header-style;
+  overflow: hidden;
+  }
+
+  .logo{
+  display: block;
+  margin: 0 0 20px 0;
+  float: left;
+  }
+
+  .global-aside {
+  display: none;
+  }
+
+  nav{
+  display: block;
+  width: 100%;
+  float: right;
+  max-width: 500px;
+
+    ul {
+    border-top: 2px solid $color-primary-2;
+    overflow: hidden;
+    }
+
+    li {
+      display: block;
+      float: right;
+      padding: 1.25%;
+    }
+    
+    a{
+          font-weight: bold;
+
+    display: block;
+    text-decoration: none;
+      
+      &:hover{
+      text-decoration: underline;
+      color: $color-primary-2;
+      }
+    }
+
+    img {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    }
+
+    .nav-icon {
+      display: none;
+    }
+  }
+
+/*row*/
+  .index-row {
+  @include div-bg (100%, $color-primary-2);
+  background-image: none;
+  border: none;
+
+    img{
+    width: 48%;
+    margin-bottom: 20px;
+    float: left;
+    border-radius: 5px;
+      
+      &:nth-of-type(2n){
+        margin-left: 2%;
+      }
+    }
+  }
+
+  .row {
+  @include div-bg (100%, transparent);
+  background-image: url(../assets/img_global/stripepattern1.jpg);
+  background-repeat: repeat;
+  overflow: hidden;
+
+    img{
+    width: 47%;
+    margin-bottom: 20px;
+    float: left;
+    border-radius: 5px;
+    margin-left: 0;
+      
+      &:nth-of-type(2){
+        margin-left: 6%;
+      }
+    }
+  }
+
+/*sections*/
+  .below-fold{
+  @include div-bg (100%, transparent);
+  background-image: url(../assets/img_global/stripepattern1.jpg);
+  background-repeat: repeat;
+  overflow: hidden;
+  }
+  
+  .index-copy{
+    background-color: $color-primary-3;
+    border-radius: 10px;
+    padding:20px;
+  }
+  
+  .address {
+  margin: 50px 0;
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  background-color: #3F3A34;
+  border-radius: 10px;
+  padding: 30px 8%;
+
+    h3{
+     color: #F2DD78;
+    }
+
+    p {
+    color: #FFF;
+    border-bottom: 1px solid #F2DD78;
+    padding-bottom: 20px;
+    }
+
+    a {
+    @include link-style (#FFF, $color-primary-1);  
+    display: block;
+    margin-bottom: 0;
+    }
+
+    button {
+      @include button-style ($color-primary-2, $color-primary-1);
+      margin: 20px auto;
+    }
+  }
+
+  iframe{
+    max-width: 500px;
+  }
+.patients {
+  button {
+    float: left;
+    margin-right: 10px;
+  }
+}
+/*footer*/
+  footer{
+    .global-footer{
+    display: none;
+    }
+
+    .second-footer{
+    display: block;
+    } 
+    
+    .second-footer p{
+    @include footer-font;
+    }
+    
+    .second-footer a{  
+        @include link-style (#FFF, $color-primary-1);
+    }
+  }
+
+}
+
+@media screen and (min-width: 53em) {
+
+  nav{
+  max-width: 520px;
+  }
+
+  nav li {
+  padding:1.75%;
+  }
+
+  .welcome { 
+    h1, h2{
+    text-align: center;
+    }
+
+    button {
+    float: right;
+    margin-top: 50px;
+    }
+  }
+
+  .index-row img{
+  width: 23.5%;
+  margin-left: 2%;
+  }
+
+  .row img{
+  width: 32%;
+  margin-left: 2%;
+    
+    &:nth-of-type(2n){
+      margin-left: 2%;
+    }
+    
+    &:nth-of-type(1){ 
+      margin-left: 0;
+    }
+  }
+
+.column-left {
+width: 55%;
+margin-right: 2%;
+float: left;
+}
+
+.column-right {
+  width: 40%;
+  float: right;
+}
+.address {
+    margin: 0;
+    width: 95%;
+}
+
+.chamber{
+float: right;
+}
+
+.second-footer p {
+  text-align: center;
+}
+
 }
