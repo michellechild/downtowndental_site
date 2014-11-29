@@ -1,0 +1,236 @@
+
+@media screen and (min-width: 35em) {
+
+/*header*/
+  .menu {
+  display: none;
+  }
+
+  header {
+  @include header-style;
+  overflow: hidden;
+  }
+  
+  .welcome .location {
+  display: block;
+  }
+  
+  .logo{
+  display: block;
+  margin: 0 0 20px 0;
+  float: left;
+  }
+
+  .global-aside {
+  display: none;
+  }
+
+  nav{
+  display: block;
+  width: 100%;
+  float: right;
+  max-width: 500px;
+
+    ul {
+    border-top: 2px solid $color-primary-2;
+    overflow: hidden;
+    }
+
+    li {
+      display: block;
+      float: right;
+      padding: 1.25%;
+    }
+    
+    a{
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+      
+      &:hover{
+      text-decoration: underline;
+      color: $color-primary-2;
+      }
+    }
+
+    img {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    }
+
+    .nav-icon {
+      display: none;
+    }
+  }
+
+/*row*/
+  .index-row {
+  @include div-bg (100%, $color-primary-2);
+  background-image: none;
+  border: none;
+
+    img{
+    width: 48%;
+    margin-bottom: 20px;
+    float: left;
+    border-radius: 5px;
+      
+      &:nth-of-type(2n){
+        margin-left: 2%;
+      }
+    }
+  }
+
+  .row {
+  @include stripe-style;
+
+    img{
+    width: 47%;
+    margin-bottom: 20px;
+    float: left;
+    border-radius: 5px;
+    margin-left: 0;
+      
+      &:nth-of-type(2){
+        margin-left: 6%;
+      }
+    }
+  }
+
+/*sections*/
+  .below-fold{
+  @include stripe-style;
+  }
+  
+  .index-copy{
+    background-color: $color-primary-3;
+    border-radius: 10px;
+    padding:20px;
+  }
+  
+  .address {
+  margin: 50px 0;
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  background-color: #3F3A34;
+  border-radius: 10px;
+  padding: 30px 8%;
+
+    h3{
+     color: #F2DD78;
+    }
+
+    p {
+    color: #FFF;
+    border-bottom: 1px solid #F2DD78;
+    padding-bottom: 20px;
+    }
+
+    a {
+    @include link-style (#FFF, $color-primary-1);  
+    display: block;
+    margin-bottom: 0;
+    }
+
+    button {
+      @include button-style ($color-primary-2, $color-primary-1);
+      margin: 20px auto;
+    }
+  }
+
+  iframe{
+    max-width: 500px;
+  }
+
+.patients {
+  button {
+    float: left;
+    margin-right: 10px;
+  }
+}
+/*footer*/
+  footer{
+    .global-footer{
+    display: none;
+    }
+
+    .second-footer{
+    display: block;
+    } 
+    
+    .second-footer p{
+    @include footer-font;
+    }
+    
+    .second-footer a{  
+    @include link-style (#FFF, $color-primary-1);
+    }
+  }
+
+}
+
+@media screen and (min-width: 53em) {
+
+  nav{
+  max-width: 520px;
+  
+    li {
+    padding:1.75%;
+    }
+  }
+
+  .welcome { 
+    h1, h2{
+    text-align: center;
+    }
+
+    button {
+    float: right;
+    margin-top: 50px;
+    }
+  }
+
+  .index-row img{
+  width: 23.5%;
+  margin-left: 2%;
+  }
+
+  .row img{
+  width: 32%;
+  margin-left: 2%;
+    
+    &:nth-of-type(2n){
+      margin-left: 2%;
+    }
+    
+    &:nth-of-type(1){ 
+      margin-left: 0;
+    }
+  }
+
+.column-left {
+width: 55%;
+margin-right: 2%;
+float: left;
+}
+
+.column-right {
+  width: 40%;
+  float: right;
+}
+.address {
+    margin: 0;
+    width: 95%;
+}
+
+.chamber{
+float: right;
+}
+
+.second-footer p {
+  text-align: center;
+}
+
+}

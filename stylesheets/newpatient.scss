@@ -24,14 +24,14 @@ margin-bottom: 30px;
 float: right;
 outline: none;
 
-&:hover {
+  &:hover {
   background-color: $color-primary-2;
   color: $color-primary-1;
-}
+  }
 }
 
 .logo {
-  width: 200px;
+  max-width: 200px;
   margin: 0 auto 50px auto;
 }
 
@@ -67,21 +67,21 @@ nav {
   display: none;
 }
 
+.column-left, .column-right {
+  width: 100%;
+  margin-right: 0;
+  float: none;
+}
  /*
   ========================================
   GLOBAL Photos
   ========================================
 */
 
-.index-row {
-@include div-bg (100%, $transparent);
-background-image: url(../assets/img_global/stripepattern1.jpg);
-background-repeat: repeat;
-border-top: 3px solid $color-primary-2;
-border-bottom: 3px solid $color-primary-2;
-
+.index-row, .row {
+@include stripe-style; 
   
-  .index-photo-wrap {
+  .index-photo-wrap, .photo-wrap {
   max-width: 960px;
   margin: 0 auto;
   }
@@ -97,31 +97,8 @@ border-bottom: 3px solid $color-primary-2;
   }
 }
 
-  .row {
-  @include div-bg(100%, $transparent);
-  border-top: 3px solid $color-primary-2;
-  border-bottom: 3px solid $color-primary-2;
-  background-image: url(../assets/img_global/stripepattern1.jpg);
-  background-repeat: repeat;
-
-  .photo-wrap {
-  max-width: 960px;
-  margin: 0;
-  }
-    
-  img{
-  border: 2px solid #3F3A34;
-  width: 100%;
-  margin-bottom: 10px;
-  }
-
-  .photo-1{
-  margin-left: 0;
-  }
-
   h1 {
   margin-top: 30px;
-  }
   }
 /*
   ========================================
@@ -129,8 +106,6 @@ border-bottom: 3px solid $color-primary-2;
   ========================================
 */
 .welcome {
-  padding-top: 40px;
-  
   .location {
   display: none;
   }
@@ -146,32 +121,21 @@ border-bottom: 3px solid $color-primary-2;
 }
 
 .below-fold {
-  @include div-bg (100%, $color-primary-3);
-  overflow: hidden;
+@include div-bg (100%, $color-primary-3);overflow: hidden;
 }
 
-  .index-copy{
-  h2 {
-  font-weight: bold;
-  }
-  
-  p{
-  @include p-font;
-  margin-bottom: 20px;
-  }
-
-  a:hover {
-    font-weight: bold;
-  }
+.index-copy a:hover {
+font-weight: bold;
 }
+
 
 iframe{
-  width: 100%;
-  max-width: 300px;
-  min-height: 300px;
-  display: block;
-  margin-top: 30px;
-  border: 3px #3F3A34 solid;
+width: 100%;
+max-width: 300px;
+min-height: 300px;
+display: block;
+margin-top: 30px;
+border: 3px #3F3A34 solid;
 }
 
 .address {
@@ -185,8 +149,9 @@ iframe{
 */
 
 .about {
-  h2{
-  margin-top: 30px;
+  
+  h2 {
+    margin-top: 30px;
   }
 
   .first {
@@ -199,11 +164,9 @@ iframe{
 
   li {
     @include li-font;
-    list-style-position: inside;
-    margin-left: 1em;
-    padding-left: 2.5em;
-    margin-top: 15px;
     line-height: 30px;
+    margin-left: 1em;
+    margin-top: 20px;
     }
 }
 
@@ -214,16 +177,12 @@ iframe{
 */
 .services {
   overflow: hidden;
-  p {
-  margin-bottom: 25px;
-  }
 
   li {
   @include li-font;
   height: 70px;
   width: 130px;
   float: left;
-  padding-left: 2.2em;
   margin-bottom: 40px;
   margin-right: 5%;
   }
@@ -233,13 +192,15 @@ iframe{
   ========================================
   GLOBAL Financial  ========================================
 */
+ .sidenote{
+  font-style: italic;
+  font-size: 12px;
+  display: block;
+  }
 
 .financial {
   border-top: 3px solid #3F3A34;
 
-  p{
-  margin-bottom: 30px;
-  }
 }
 
 /*
@@ -248,38 +209,29 @@ iframe{
   ========================================
 */
 .patients {
-
- .sidenote{
-  font-style: italic;
-  font-size: 12px;
-  display: block;
-  }
-
-  h2{
-  margin-top: 30px;
-  font-weight: bold;
+  
+  h2 {
+    margin-top: 30px;
   }
   
   .first {
   margin-top: 0;
   }
   
-  p, ul {
+  ul {
     margin-bottom: 20px;
+    padding-left: 3em; 
+
   }
 
   .list {
     margin-bottom: 0px;
   }
 
-  ul{
-  padding-left: 3em; 
-  }
-
   li{
   @include p-font;
   list-style-type: disc;
-  line-height: 2;
+  line-height: 1.6
   }
 
   button{
@@ -321,241 +273,4 @@ footer {
   }
 }
 
-
-@media screen and (min-width: 35em) {
-
-/*header*/
-  .menu {
-  display: none;
-  }
-
-  header {
-  @include header-style;
-  overflow: hidden;
-  }
-
-  .logo{
-  display: block;
-  margin: 0 0 20px 0;
-  float: left;
-  }
-
-  .global-aside {
-  display: none;
-  }
-
-  nav{
-  display: block;
-  width: 100%;
-  float: right;
-  max-width: 500px;
-
-    ul {
-    border-top: 2px solid $color-primary-2;
-    overflow: hidden;
-    }
-
-    li {
-      display: block;
-      float: right;
-      padding: 1.25%;
-    }
-    
-    a{
-          font-weight: bold;
-
-    display: block;
-    text-decoration: none;
-      
-      &:hover{
-      text-decoration: underline;
-      color: $color-primary-2;
-      }
-    }
-
-    img {
-    display: block;
-    text-align: center;
-    margin: 10px auto;
-    }
-
-    .nav-icon {
-      display: none;
-    }
-  }
-
-/*row*/
-  .index-row {
-  @include div-bg (100%, $color-primary-2);
-  background-image: none;
-  border: none;
-
-    img{
-    width: 48%;
-    margin-bottom: 20px;
-    float: left;
-    border-radius: 5px;
-      
-      &:nth-of-type(2n){
-        margin-left: 2%;
-      }
-    }
-  }
-
-  .row {
-  @include div-bg (100%, transparent);
-  background-image: url(../assets/img_global/stripepattern1.jpg);
-  background-repeat: repeat;
-  overflow: hidden;
-
-    img{
-    width: 47%;
-    margin-bottom: 20px;
-    float: left;
-    border-radius: 5px;
-    margin-left: 0;
-      
-      &:nth-of-type(2){
-        margin-left: 6%;
-      }
-    }
-  }
-
-/*sections*/
-  .below-fold{
-  @include div-bg (100%, transparent);
-  background-image: url(../assets/img_global/stripepattern1.jpg);
-  background-repeat: repeat;
-  overflow: hidden;
-  }
-  
-  .index-copy{
-    background-color: $color-primary-3;
-    border-radius: 10px;
-    padding:20px;
-  }
-  
-  .address {
-  margin: 50px 0;
-  width: 80%;
-  max-width: 400px;
-  display: block;
-  background-color: #3F3A34;
-  border-radius: 10px;
-  padding: 30px 8%;
-
-    h3{
-     color: #F2DD78;
-    }
-
-    p {
-    color: #FFF;
-    border-bottom: 1px solid #F2DD78;
-    padding-bottom: 20px;
-    }
-
-    a {
-    @include link-style (#FFF, $color-primary-1);  
-    display: block;
-    margin-bottom: 0;
-    }
-
-    button {
-      @include button-style ($color-primary-2, $color-primary-1);
-      margin: 20px auto;
-    }
-  }
-
-  iframe{
-    max-width: 500px;
-  }
-.patients {
-  button {
-    float: left;
-    margin-right: 10px;
-  }
-}
-/*footer*/
-  footer{
-    .global-footer{
-    display: none;
-    }
-
-    .second-footer{
-    display: block;
-    } 
-    
-    .second-footer p{
-    @include footer-font;
-    }
-    
-    .second-footer a{  
-        @include link-style (#FFF, $color-primary-1);
-    }
-  }
-
-}
-
-@media screen and (min-width: 53em) {
-
-  nav{
-  max-width: 520px;
-  }
-
-  nav li {
-  padding:1.75%;
-  }
-
-  .welcome { 
-    h1, h2{
-    text-align: center;
-    }
-
-    button {
-    float: right;
-    margin-top: 50px;
-    }
-  }
-
-  .index-row img{
-  width: 23.5%;
-  margin-left: 2%;
-  }
-
-  .row img{
-  width: 32%;
-  margin-left: 2%;
-    
-    &:nth-of-type(2n){
-      margin-left: 2%;
-    }
-    
-    &:nth-of-type(1){ 
-      margin-left: 0;
-    }
-  }
-
-.column-left {
-width: 55%;
-margin-right: 2%;
-float: left;
-}
-
-.column-right {
-  width: 40%;
-  float: right;
-}
-.address {
-    margin: 0;
-    width: 95%;
-}
-
-.chamber{
-float: right;
-}
-
-.second-footer p {
-  text-align: center;
-}
-
-}
+@import 'mediaqueries';

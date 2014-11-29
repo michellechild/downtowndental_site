@@ -79,8 +79,7 @@ h2 {
   font-weight: bold;
   line-height: 1.6;
   color: #3F3A34;
-  margin-bottom: 5px;
-  margin-top: 5px; }
+  margin-bottom: 5px; }
 
 h3 {
   font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
@@ -101,7 +100,8 @@ p {
   font-weight: 400;
   line-height: 1.6;
   color: #3F3A34;
-  max-width: 550px; }
+  max-width: 550px;
+  margin-bottom: 25px; }
 
 a {
   font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
@@ -155,7 +155,7 @@ header {
     color: #F2DD78; }
 
 .logo {
-  width: 200px;
+  max-width: 200px;
   margin: 0 auto 50px auto; }
 
 .global-aside {
@@ -205,12 +205,17 @@ header {
 nav {
   display: none; }
 
+.column-left, .column-right {
+  width: 100%;
+  margin-right: 0;
+  float: none; }
+
  /*
   ========================================
   GLOBAL Photos
   ========================================
 */
-.index-row {
+.index-row, .row {
   padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
@@ -220,63 +225,42 @@ nav {
   background-repeat: repeat;
   border-top: 3px solid #3F3A34;
   border-bottom: 3px solid #3F3A34; }
-  .index-row .index-photo-wrap {
+  .index-row .index-photo-wrap, .index-row .photo-wrap, .row .index-photo-wrap, .row .photo-wrap {
     max-width: 960px;
     margin: 0 auto; }
-  .index-row img {
+  .index-row img, .row img {
     width: 100%;
     margin-bottom: 20px;
     display: inline-block;
     border-radius: 5px; }
-  .index-row .photo-1 {
+  .index-row .photo-1, .row .photo-1 {
     margin-left: 0; }
 
-.row {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  width: 100%;
-  background-color: transparent;
-  overflow: hidden;
-  border-top: 3px solid #3F3A34;
-  border-bottom: 3px solid #3F3A34;
-  background-image: url(../assets/img_global/stripepattern1.jpg);
-  background-repeat: repeat; }
-  .row .photo-wrap {
-    max-width: 960px;
-    margin: 0; }
-  .row img {
-    border: 2px solid #3F3A34;
-    width: 100%;
-    margin-bottom: 10px; }
-  .row .photo-1 {
-    margin-left: 0; }
-  .row h1 {
-    margin-top: 30px; }
+h1 {
+  margin-top: 30px; }
 
 /*
   ========================================
   GLOBAL Home
   ========================================
 */
-.welcome {
-  padding-top: 40px; }
-  .welcome .location {
-    display: none; }
-  .welcome h2 {
-    font-size: 2.5em; }
-  .welcome button {
-    margin-top: 30px;
-    font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
-    font-size: 1.8em;
-    padding: 18px;
-    border-radius: 5px;
-    color: #F2DD78;
-    background-color: #3F3A34;
-    border: 3px outset #3F3A34;
-    outline: none; }
-    .welcome button:hover {
-      color: #3F3A34;
-      background-color: #F2DD78; }
+.welcome .location {
+  display: none; }
+.welcome h2 {
+  font-size: 2.5em; }
+.welcome button {
+  margin-top: 30px;
+  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+  font-size: 1.8em;
+  padding: 18px;
+  border-radius: 5px;
+  color: #F2DD78;
+  background-color: #3F3A34;
+  border: 3px outset #3F3A34;
+  outline: none; }
+  .welcome button:hover {
+    color: #3F3A34;
+    background-color: #F2DD78; }
 
 .below-fold {
   padding-top: 60px;
@@ -286,18 +270,6 @@ nav {
   overflow: hidden;
   overflow: hidden; }
 
-.index-copy h2 {
-  font-weight: bold; }
-.index-copy p {
-  font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
-  font-size: 1.8em;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #3F3A34;
-  max-width: 550px;
-  margin-bottom: 20px; }
 .index-copy a:hover {
   font-weight: bold; }
 
@@ -324,19 +296,19 @@ iframe {
 .about span {
   font-weight: bold; }
 .about li {
+  display: inline-block;
   font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
   font-size: 1.8em;
   font-style: normal;
   font-variant: normal;
-  line-height: 1.3;
-  display: block;
+  line-height: 1.3em;
+  vertical-align: middle;
+  padding-left: 2.2em;
   background-image: url(../assets/icons_global/toothservices.png);
   background-repeat: no-repeat;
-  list-style-position: inside;
+  line-height: 30px;
   margin-left: 1em;
-  padding-left: 2.5em;
-  margin-top: 15px;
-  line-height: 30px; }
+  margin-top: 20px; }
 
 /*
   ========================================
@@ -345,21 +317,20 @@ iframe {
 */
 .services {
   overflow: hidden; }
-  .services p {
-    margin-bottom: 25px; }
   .services li {
+    display: inline-block;
     font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
     font-size: 1.8em;
     font-style: normal;
     font-variant: normal;
-    line-height: 1.3;
-    display: block;
+    line-height: 1.3em;
+    vertical-align: middle;
+    padding-left: 2.2em;
     background-image: url(../assets/icons_global/toothservices.png);
     background-repeat: no-repeat;
     height: 70px;
     width: 130px;
     float: left;
-    padding-left: 2.2em;
     margin-bottom: 40px;
     margin-right: 5%; }
 
@@ -367,31 +338,28 @@ iframe {
   ========================================
   GLOBAL Financial  ========================================
 */
+.sidenote {
+  font-style: italic;
+  font-size: 12px;
+  display: block; }
+
 .financial {
   border-top: 3px solid #3F3A34; }
-  .financial p {
-    margin-bottom: 30px; }
 
 /*
   ========================================
   GLOBAL Patients
   ========================================
 */
-.patients .sidenote {
-  font-style: italic;
-  font-size: 12px;
-  display: block; }
 .patients h2 {
-  margin-top: 30px;
-  font-weight: bold; }
+  margin-top: 30px; }
 .patients .first {
   margin-top: 0; }
-.patients p, .patients ul {
-  margin-bottom: 20px; }
+.patients ul {
+  margin-bottom: 20px;
+  padding-left: 3em; }
 .patients .list {
   margin-bottom: 0px; }
-.patients ul {
-  padding-left: 3em; }
 .patients li {
   font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
   font-size: 1.8em;
@@ -401,8 +369,9 @@ iframe {
   line-height: 1.6;
   color: #3F3A34;
   max-width: 550px;
+  margin-bottom: 25px;
   list-style-type: disc;
-  line-height: 2; }
+  line-height: 1.6; }
 .patients button {
   font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
   font-size: 1.8em;
@@ -474,6 +443,9 @@ footer {
     background-size: cover;
     overflow: hidden; }
 
+  .welcome .location {
+    display: block; }
+
   .logo {
     display: block;
     margin: 0 0 20px 0;
@@ -533,7 +505,8 @@ footer {
     overflow: hidden;
     background-image: url(../assets/img_global/stripepattern1.jpg);
     background-repeat: repeat;
-    overflow: hidden; }
+    border-top: 3px solid #3F3A34;
+    border-bottom: 3px solid #3F3A34; }
     .row img {
       width: 47%;
       margin-bottom: 20px;
@@ -552,7 +525,8 @@ footer {
     overflow: hidden;
     background-image: url(../assets/img_global/stripepattern1.jpg);
     background-repeat: repeat;
-    overflow: hidden; }
+    border-top: 3px solid #3F3A34;
+    border-bottom: 3px solid #3F3A34; }
 
   .index-copy {
     background-color: #E0DACD;
@@ -636,9 +610,8 @@ footer {
 @media screen and (min-width: 53em) {
   nav {
     max-width: 520px; }
-
-  nav li {
-    padding: 1.75%; }
+    nav li {
+      padding: 1.75%; }
 
   .welcome h1, .welcome h2 {
     text-align: center; }
