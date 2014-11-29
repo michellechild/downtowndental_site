@@ -4,7 +4,14 @@ div, header, nav, section, article, aside, footer, figure, hr{
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 
 body, .subpage{
 background-color: $color-primary-3;
