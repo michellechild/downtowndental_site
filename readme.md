@@ -3,7 +3,7 @@
 This is a redesign of a dentist office's website as part of a comprehensive design project in the Iron Yard Web Design class.
 
 This is also the first website I've ever built, using HTML and CSS. 
-
+*Site is now updated with Sass and responsive design: 11/29/2014.
 <br>
 
 ##Style Guides
